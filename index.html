@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shizuku Maker</title>
+    <script src="js/maker.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Shizuku Maker</h1>
+<div id="maker">
+    <form>
+        <input placeholder="Text here" id="innerPicText">
+        <input type="button" onclick="maker(document.getElementById('innerPicText').value)" value="Make"/>
+    </form>
+    <canvas id="canvas" width="593" height="593"></canvas>
+    <input type="button" onclick="saveCanvas('canvas') " value="Save"/>
+</div>
+</body>
+<script>
+    var canvas = document.getElementById("canvas");
+    if (window.innerWidth > 593) {
+        canvas.style.width = canvas.style.height = '593px';
+    } else {
+        canvas.style.width = canvas.style.height = window.innerWidth - 10 + 'px';
+    }
+    var ctx = canvas.getContext("2d");
+    var img = new Image();
+    img.src = "img/pic.jpg";
+    img.onload = function() {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+</script>
+</html>
