@@ -28,10 +28,10 @@
 </body>
 <script>
     var canvas = document.getElementById("canvas");
-    if (window.innerWidth > 593) {
+    if (screen.width > 593) {
         canvas.style.width = canvas.style.height = '593px';
     } else {
-        canvas.style.width = canvas.style.height = window.innerWidth - 10 + 'px';
+        canvas.style.width = canvas.style.height = screen.width - 20 + 'px';
     }
     var ctx = canvas.getContext("2d");
     var img = new Image();
