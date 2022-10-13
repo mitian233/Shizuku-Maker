@@ -25,9 +25,11 @@ function maker(text) {
     }
     ctx.restore();
 }
-function saveCanvas(canvasID) {
-    var image = new Image();
-    image.src = document.getElementById(canvasID).toDataURL("image/png", 1.0, width=593, height=593);
-    var url = image.src.replace(/^data:image\/[^;]/, 'data:application/octet-stream');
-    window.open(url);
+
+function downLoadImage(canvas,name) {
+    var canvas = document.getElementById(canvas);
+    var a = document.createElement("a");
+    a.href = canvas.toDataURL();
+    a.download = name;
+    a.click();
 }
