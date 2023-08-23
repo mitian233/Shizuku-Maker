@@ -71,7 +71,7 @@ function downLoadImage(canvasId: string,name: string): void {
             <button class="btn mx-1" v-on:click="downLoadImage('canvas','download.jpg')">Save</button>
         </div>
         <div class="py-3">
-            <p>© 2022&nbsp;<a href="https://github.com/mitian233/Shizuku-Maker" class="link">Shizuku Maker</a></p>
+            <p>© 2023&nbsp;<a href="https://github.com/mitian233/Shizuku-Maker" class="link">Shizuku Maker</a> Rewrite with Vuejs and TypeScript</p>
             <p>Image Source: ©2020 プロジェクトラブライブ！虹ヶ咲学園スクールアイドル同好会</p>
         </div>
     </div>
