@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 import bgImg from "../assets/img/pic.jpg";
 
 const inputText = ref<string>("");
