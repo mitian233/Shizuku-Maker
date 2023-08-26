@@ -68,7 +68,7 @@ function downLoadImage(canvasId: string,name: string): void {
         <div>
             <button class="btn btn-primary mx-1" v-on:click="maker(inputText)">Generate</button>
             <button class="btn btn-warning mx-1" v-on:click="inputText='';maker(inputText)">Clean</button>
-            <button class="btn mx-1" v-on:click="downLoadImage('canvas','download.jpg')">Save</button>
+            <button class="btn mx-1" v-on:click="downLoadImage('canvas',inputText+'_download.png')">Save</button>
         </div>
         <div class="py-3">
             <p>© 2023&nbsp;<a href="https://github.com/mitian233/Shizuku-Maker" class="link">Shizuku Maker</a> Rewrite with Vuejs and TypeScript</p>
